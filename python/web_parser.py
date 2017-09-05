@@ -5,7 +5,7 @@ import re
 import os
 from bs4 import BeautifulSoup
 #def get_images(n, dir): #n is number of images, dir is directory name
-url = "https://twitter.com/weeditiotic/status/870668769940484096"
+url = "https://twitter.com/brakoo/status/846230836785676288"
 thepage= urllib.request.urlopen(url)
 soup= BeautifulSoup(thepage,"html.parser")
 
@@ -15,7 +15,7 @@ for img in soup.findAll('img'):
 j=1
 temp=(soup.findAll("div",{"class":"AdaptiveMedia-photoContainer"}))
 #print(temp)
-dir="alexandra"
+dir="brakoo"
 for img in temp:
 	img=str(img)
 	t=list(re.findall('src="(.*?)"',img))
